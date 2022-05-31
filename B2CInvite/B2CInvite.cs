@@ -80,7 +80,7 @@ namespace B2CInvite
                 string url = B2CInvite.BuildUrl(token, config);
                 #endregion
 
-                return new OkObjectResult(new { message = $"Token gerado com sucesso, URL: {url}" });
+                return new OkObjectResult(new { url });
             } catch (Exception ex)
             {
                 log.LogError(ex.Message);
